@@ -1,0 +1,21 @@
+/* 링크를 추가하지 말고, css로 직접 추가하자 */
+@import "reset.css";
+@import "variables.css";
+
+/* components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+
+/* screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+
+/* 'https://fonts.google.com'에 가서 다양한 글꼴을 가져오자 */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* color: #2f363e;; */
+}

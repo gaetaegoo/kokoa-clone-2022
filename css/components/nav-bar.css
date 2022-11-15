@@ -1,0 +1,44 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* CSS에게 padding을 줘도 더이상 박스 사이즈를
+    늘리지 말라고 알려줘야 함 'box-sizing: border-box;'
+    그 반대로는 content-box가 있다*/
+    box-sizing: border-box;
+    background-color: #f9f9fa;
+    padding: 20px 45px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+.nav__link {
+    /* 부모라서 position:relative; */
+    position: relative;
+    color: #2f363e;
+}
+.nav__notification {
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* 자식이라서 position:absolute; */
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+}
+.nav__notification2 {
+    background-color: tomato;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    bottom: 15px;
+}

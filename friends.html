@@ -1,0 +1,75 @@
+<!-- 대부분의 웹서버가 디폴트로 index.html을 찾아보도록 설정되어 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- link:css 단축키 활용 -->
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Friends - Kokoa Clone</title>
+    </head>
+    <!-- BEM(Block Element Modifier) CSS -->
+    <!-- id를 쓰지 말고, class로 통일 추천 -->
+    <!-- reset CSS를 꼭 활용하자(브라우저 맘대로 못 하게) -->
+    <body>
+        <div class="status-bar">
+            <div class="status-bar__column">
+                <span>No Service</span>
+                <!-- 저아래 script에서 가져온 icon -->
+                <i class="fa-solid fa-wifi fa-xs"></i>
+                </svg>
+            </div>
+            <div class="status-bar__column">
+                <span>18:43</span>
+            </div>
+            <div class="status-bar__column">
+                <span>100%</span>
+                <i class="fa-solid fa-battery-full"></i>
+                <!-- 'fa-밸류값'으로 아이콘 크기 지정 가능 -->
+                <i class="fa-solid fa-bolt-lightning fa-xs"></i>
+            </div>
+        </div>
+
+        <header class="screen-header">
+            <h1 class="screen-header__title">Friends</h1>
+            <div class="screen-header__icons">
+                <span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span>
+                <span><i class="fa-solid fa-music fa-xl"></i></span>
+                <span><i class="fa-solid fa-gear fa-xl"></i></span>
+            </div>
+        </header>
+
+        <a id="friends-display-link">
+            <i class="fa-solid fa-circle-info"></i>Friends' Names Display<i class="fa-solid fa-chevron-right fa-xs"></i>
+        </a>
+
+        <!-- .user-component__column*2 -->
+        <div class="user-component">
+            <div class="user-component__column">
+                <img src="images/gaetaegoo.jpg" class="user-component__avatar">
+                <div class="user-component__text">
+                    <h4 class="user-component__title">Gaetaegoo</h4>
+                    <h6 class="user-component__subtitle">Ubermensch</h6>
+                </div>
+            </div>
+            <div class="user-component__column"></div>
+        </div>
+
+        <!-- 'nav>ul>li*4>a' -->
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__btn"><a class="nav__link" href="friends.html"><i class="fa-solid fa-user fa-xl"></i></a></li>
+                <li class="nav__btn"><a class="nav__link" href="#"><span class="nav__notification">1</span><i class="fa-regular fa-comment fa-xl"></i></a></li>
+                <li class="nav__btn"><a class="nav__link" href="#"><i class="fa-solid fa-magnifying-glass fa-xl"></i></a></li>
+                <li class="nav__btn"><a class="nav__link" href="#"><span class="nav__notification2"></span><i class="fa-solid fa-ellipsis fa-xl"></i></a></li>
+            </ul>
+        </nav>
+
+        <!-- script는 항상 마지막에 있어야 함, body태그를 닫기 직전 -->
+        <script
+            src="https://kit.fontawesome.com/389d342bca.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

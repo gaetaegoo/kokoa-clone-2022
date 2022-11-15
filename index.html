@@ -1,0 +1,57 @@
+<!-- 대부분의 웹서버가 디폴트로 index.html을 찾아보도록 설정되어 있음 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- link:css 단축키 활용 -->
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to Kokoa Clone</title>
+    </head>
+    <!-- BEM(Block Element Modifier) CSS -->
+    <!-- id를 쓰지 말고, class로 통일 추천 -->
+    <!-- reset CSS를 꼭 활용하자(브라우저 맘대로 못 하게) -->
+    <body>
+        <div class="status-bar">
+            <div class="status-bar__column">
+                <span>No Service</span>
+                <!-- 저아래 script에서 가져온 icon -->
+                <i class="fa-solid fa-wifi fa-xs"></i>
+                </svg>
+            </div>
+            <div class="status-bar__column">
+                <span>18:43</span>
+            </div>
+            <div class="status-bar__column">
+                <span>100%</span>
+                <i class="fa-solid fa-battery-full"></i>
+                <!-- 'fa-밸류값'으로 아이콘 크기 지정 가능 -->
+                <i class="fa-solid fa-bolt-lightning fa-xs"></i>
+            </div>
+        </div>
+
+        <header class="welcome-header">
+            <h1 class="welcome-heder__title">Welcome to Kokoa Clone</h1>
+            <p class="welcome-heder__text">If you have a Kokoa Account, log in with your email or phone number.</p>
+        </header>
+
+        <!-- action: 어떤 페이지로 data를 보낼건지 지정 가능 -->
+        <!-- method: post(백엔드)와 get(보안 취약)방식으로 전송 가능 -->
+        <!-- id와 password같은 중요 정보는 get방식으로 보내지 말 것 -->
+        <!-- url에 포함되어도 상관없는 정보들은 get방식으로 보내야 함 -->
+        <form action="friends.html" method="get" id="login-form">
+            <input name="username" type="text" placeholder="Email or phone number">
+            <input name="password" type="password" placeholder="Password">
+            <input type="submit" value="Log In">
+            <input type="submit" value="Sign Up">
+            <a href="#">Find Kokoa Account or Password</a>
+        </form>
+
+        <!-- script는 항상 마지막에 있어야 함, body태그를 닫기 직전 -->
+        <script
+            src="https://kit.fontawesome.com/389d342bca.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
