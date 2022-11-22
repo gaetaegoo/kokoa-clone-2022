@@ -11,3 +11,27 @@
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.friends-screen {
+    padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+    margin-top: 15px;
+    border-top: var(--main-border);
+    padding-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.friends-screen__channel-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.friends-screen__channel-header i {
+    margin-top: 10px;
+}
