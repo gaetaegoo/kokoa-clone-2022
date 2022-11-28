@@ -169,6 +169,7 @@
     padding: 5px 15px 5px 14px;
     box-sizing: border-box;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .reply__column:first-child {
@@ -225,10 +226,10 @@
 }
 
 @keyframes replayOpacity {
-    from{
+    from {
         opacity: 1;
     }
-    to{
+    to {
         opacity: 0;
     }
 }
@@ -236,10 +237,14 @@
 .reply:focus-within .reply__column:first-child,
 .reply:focus-within .fa-face-smile-wink,
 .reply:focus-within button {
-    tran
+    opacity: 0;
 }
 
 .reply:focus-within input {
     width: 95vw;
-    transform: translateX(-8%);
+    transform: translateX(-8%) translateY(-80px);
+}
+
+.reply:focus-within {
+    transform: translateY(80px);
 }

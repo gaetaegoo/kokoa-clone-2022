@@ -1,0 +1,53 @@
+/* #no-mobile {
+    모든 것의 위로 올라가게
+    position: absolute;
+    z-index를 아주 높게 해서, splash나 friends 스크린이 더 이상 위로 오지 못 하게
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    font-size: 28px;
+    font-weight: 700;
+} */
+
+/* max-width: 설정값까지(이하) 적용 */
+/* min-width: 설정값부터(이상) 적용 */
+/* @media screen and (max-width: 645px) {
+    #no-mobile {
+        display: none;
+    }
+} */
+
+/* Chat에서 스크롤 때문에 제대로 가려지지 않는 문제 해결
+- position:fixed 설정
+- body에 스크롤 불가 설정 */
+#no-mobile {
+    display: none;
+}
+
+@media screen and (min-width: 645px) {
+    #no-mobile {
+        position: fixed;
+        z-index: 99;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--yellow);
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    /* 스크롤 불가 설정 */
+    body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+}

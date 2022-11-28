@@ -10,6 +10,7 @@
 @import "components/badge.css";
 @import "components/icon-row.css";
 @import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
 
 /* screens */
 @import "screens/login.css";
@@ -19,14 +20,9 @@
 @import "screens/settings.css";
 @import "screens/chat.css";
 
-/* 'https://fonts.google.com'에 가서 다양한 글꼴을 가져오자 */
+/* 'https://fonts.google.com'에서 다양한 글꼴 가져오기 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
     font-family: "Roboto", sans-serif;
-    /* color: #2f363e;; */
 }
-
-/* .main-screen {
-    padding: 0px var(--horizontal-space);
-} */

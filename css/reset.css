@@ -122,6 +122,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/* ----- 새로 추가한 코드 ----- */
 input:focus {
     outline: none;
 }
