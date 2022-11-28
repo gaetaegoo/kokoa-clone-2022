@@ -8,3 +8,17 @@
     align-items: center;
     color: white;
 }
+
+.badge2 {
+    background-color: tomato;
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
+    font-size: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    left: 100px;
+}

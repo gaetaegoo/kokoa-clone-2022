@@ -1,4 +1,4 @@
-.find-icons {
+/* .find-icons {
     display: flex;
     justify-content: space-between;
     margin: 40px 20px 0;
@@ -16,7 +16,7 @@
 
 .find-icons__icon > span {
     margin-top: 25px;
-}
+} */
 
 .recommended-friends {
     margin: 20px 20px;
@@ -114,8 +114,8 @@
 }
 
 .open-post__photo img {
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
     border-radius: 15%;
 }
 
@@ -135,4 +135,20 @@
 .open-post__heart-count span {
     margin-left: 3px;
     font-size: 10px;
+}
+
+@keyframes heartBeat {
+    from {
+    }
+    to {
+        color: tomato;
+        /* scale을 통해서 크기 변화를 주자 */
+        transform: scale(1.5);
+    }
+}
+
+.open-post__heart-count:hover i {
+    animation: heartBeat 0.1s ease-in-out forwards;
+    /* 브라우저에게 (VGA가속을 활용) 미리(transform 등을) 알려줌 */
+    will-change: transform;
 }

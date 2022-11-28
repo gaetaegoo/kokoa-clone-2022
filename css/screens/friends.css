@@ -2,7 +2,7 @@
     text-align: center;
     display: block;
     background-color: #fafafa;
-    padding: 10px 0;
+    padding: 7px 0;
     font-size: 14px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .friends-screen__channel {
-    margin-top: 15px;
+    margin-top: 10px;
     border-top: var(--main-border);
     padding-top: 15px;
     margin-left: 20px;
@@ -34,4 +34,34 @@
 
 .friends-screen__channel-header i {
     margin-top: 10px;
+}
+
+@keyframes hideSplashScreen {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        /* 키프레임 화면에 그대로 남아 있어서, 몇 가지 시도를 해야 한다 */
+        /* display: none; 먹히지 않음 */
+        /* 마우스에 걸리지 않게함, 브라우저상에는 남아 있음 */
+        visibility: hidden;
+        /* 브라우저상에서 없애려면 javascript가 필요함 */
+    }
+}
+
+#splash-screen {
+    background-color: var(--yellow);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 96px;
+    /* forwards를 줘서 opacity 0의 값을 유지함(애니메이션 종료 효과 유지) */
+    animation: hideSplashScreen 0.3s ease-in-out forwards;
+    /* 애니메이션 처음화면이 유지되다가 넘어갈 수 있도록 */
+    animation-delay: 0.5s;
 }

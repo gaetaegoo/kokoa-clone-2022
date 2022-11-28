@@ -1,0 +1,31 @@
+.alt-header {
+    display: flex;
+    align-items: center;
+    padding: 50px 15px 15px 20px;
+    opacity: 90%;
+}
+
+.alt-header__title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.alt-header__column {
+    /* 3개의 컬럼 공평하게 3등분 */
+    width: 33%;
+}
+
+.alt-header__column:nth-child(2) {
+    /* 텍스트 중앙 정렬 */
+    text-align: center;
+}
+
+.alt-header__column:last-child {
+    /* flex주고 끝으로 붙이기 */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alt-header__column span:last-child {
+    margin-left: 10px;
+}

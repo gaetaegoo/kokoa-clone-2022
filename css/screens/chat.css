@@ -1,0 +1,245 @@
+#chat-screen {
+    background-color: #abc1d1;
+    height: 500vh;
+}
+
+.main-screen {
+    padding: 0px 15px;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0px;
+    /* alt-header, status-bar보다 밑에 있는 요소들은
+    스크롤을 내리면서 안 보이게(덮어버리게) 하기 위해
+    background-color를 입혔다 */
+    background-color: #abc1d1;
+}
+
+/* 포지션을 fixed하여 다른 레이어가 되었다 */
+/* z-index의 기본값은 0이다 */
+/* 숫자가 높을 수록 위에 위치한다(상위 레이어) */
+#chat-screen .alt-header {
+    z-index: 1;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.main-chat {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    opacity: 0.8;
+    padding: 4px 12px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.message-row img {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+    margin-right: 7px;
+}
+
+.message_author {
+    color: rgb(99, 99, 99);
+    font-size: 13px;
+    /* margin-bottom을 가질 수 있게, block 걸어주기 */
+    margin-top: 3px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.message__bubble {
+    background-color: rgb(240, 240, 240);
+    color: rgb(19, 19, 19);
+    padding: 7px 10px;
+    border-radius: 10px;
+    /* 카카오톡 말풍선처럼 모서리에 효과 주기 */
+    border-top-left-radius: 0px;
+    font-size: 16px;
+    margin-right: 5px;
+    opacity: 0.9;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__time {
+    font-size: 10px;
+    color: black;
+    opacity: 0.5;
+}
+
+/* modifier 때문에 줄일 수 있었던 많은 코드들 */
+/* .message-row2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.message__bubble2 {
+    background-color: #fee500;
+    color: rgb(19, 19, 19);
+    padding: 5px 10px;
+    border-radius: 10px;
+    카카오톡 말풍선처럼 모서리에 효과 주기
+    border-top-right-radius: 0px;
+    font-size: 16px;
+    margin-left: 5px;
+    opacity: 0.9;
+}
+
+.message__info2 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__time2 {
+    font-size: 10px;
+    color: black;
+    opacity: 0.5;
+} */
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+    background-color: #fee500;
+    border-top-right-radius: 0px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+/* order: flex children에게만 적용 됨 */
+/* .message-row--own .message__bubble {
+    order: 1;
+}
+.message-row--own .message__time {
+    order: 0;
+} */
+
+/* 위 order를 한 방에 줄이기 */
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px 5px 14px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.reply__column:first-child {
+    width: 8%;
+}
+
+.reply__column:last-child {
+    width: 92%;
+    position: relative;
+}
+
+.reply input {
+    height: 30px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: -3px;
+    top: 2px;
+}
+
+.reply__column:last-child > i {
+    right: 35px;
+    top: 17px;
+    opacity: 0.5;
+}
+
+.reply__column:first-child > i {
+    opacity: 0.7;
+}
+
+.reply__column button {
+    background-color: var(--yellow);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
+
+/* 선택자로 placeholder에만 속성값 주기 */
+.reply input::placeholder {
+    padding: 10px;
+}
+
+@keyframes replayOpacity {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile-wink,
+.reply:focus-within button {
+    tran
+}
+
+.reply:focus-within input {
+    width: 95vw;
+    transform: translateX(-8%);
+}

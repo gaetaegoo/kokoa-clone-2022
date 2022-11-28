@@ -31,3 +31,18 @@
     right: -5px;
     bottom: 20px;
 }
+
+@keyframes rotateGear {
+    from {
+        transform: none;
+    }
+    to {
+        /* 놀라운 Z축 돌리기 */
+        transform: rotateZ(180deg);
+    }
+}
+
+/* 마우스를 올려 두었을 때만 돌아가게 */
+.screen-header__icons .fa-gear:hover {
+    animation: rotateGear 2s linear infinite;
+}
