@@ -186,6 +186,8 @@
     width: 100%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+    /* transition 효과가 정확히 무엇일지 공부하자 */
+    /* 뭔가 부드럽게 효과처리 되는 거 같은데 맞나? */
     transition: all 0.3s ease-in-out;
 }
 
@@ -238,13 +240,19 @@
 .reply:focus-within .fa-face-smile-wink,
 .reply:focus-within button {
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
+/* input 부분은 위로 올라가면서 *
+/* == .reply input:focus */
+/* 부모(.reply) 명시 안 하면, 모든 input에 적용 -> 망함 */
 .reply:focus-within input {
     width: 95vw;
     transform: translateX(-8%) translateY(-80px);
 }
 
+/* 전체적인 div는(input은 빼고) 아래로 내려감 */
+/* 따라서 메세지 입력 부분만 도드라지는 효과 구현 */
 .reply:focus-within {
     transform: translateY(80px);
 }
