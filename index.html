@@ -1,22 +1,23 @@
-<!-- 대부분의 웹서버가 디폴트로 index.html을 찾아보도록 설정되어 있음 -->
+<!-- 대부분의 웹서버가 디폴트로 'index.html'을 찾도록 설정 -->
+<!-- '! + tap'을 누르면 자동으로 기본 골격 완성 -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- link:css 단축키 활용 -->
+        <!-- 'link:css' 단축키 활용 -->
         <link rel="stylesheet" href="css/styles.css">
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Welcome to Kokoa Clone</title>
     </head>
-    <!-- BEM(Block Element Modifier) CSS -->
+    <!-- 'BEM(Block Element Modifier) CSS' 스타일 추천-->
     <!-- id를 쓰지 말고, class로 통일 추천 -->
-    <!-- reset CSS를 꼭 활용하자(브라우저 맘대로 못 하게) -->
+    <!-- 'reset CSS'를 꼭 활용하자(브라우저 맘대로 못 하게) -->
     <body>
         <div class="status-bar">
             <div class="status-bar__column">
                 <span>No Service</span>
-                <!-- 저아래 script에서 가져온 icon -->
+                <!-- 저 아래 script에서 가져온 icon -->
                 <i class="fa-solid fa-wifi fa-xs"></i>
                 </svg>
             </div>
@@ -49,7 +50,7 @@
         </form>
 
         <div id="no-mobile">
-            <span>Your screen is too big 😂😂</span>
+            <span>Your screen is too big 😂</span>
         </div>
 
         <!-- script는 항상 마지막에 있어야 함, body태그를 닫기 직전 -->

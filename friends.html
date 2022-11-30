@@ -1,22 +1,16 @@
-<!-- 대부분의 웹서버가 디폴트로 index.html을 찾아보도록 설정되어 있음 -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- link:css 단축키 활용 -->
         <link rel="stylesheet" href="css/styles.css">
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Friends - Kokoa Clone</title>
     </head>
-    <!-- BEM(Block Element Modifier) CSS -->
-    <!-- id를 쓰지 말고, class로 통일 추천 -->
-    <!-- reset CSS를 꼭 활용하자(브라우저 맘대로 못 하게) -->
     <body>
         <div class="status-bar">
             <div class="status-bar__column">
                 <span>No Service</span>
-                <!-- 저아래 script에서 가져온 icon -->
                 <i class="fa-solid fa-wifi fa-xs"></i>
                 </svg>
             </div>
@@ -26,7 +20,6 @@
             <div class="status-bar__column">
                 <span>100%</span>
                 <i class="fa-solid fa-battery-full"></i>
-                <!-- 'fa-밸류값'으로 아이콘 크기 지정 가능 -->
                 <i class="fa-solid fa-bolt-lightning fa-xs"></i>
             </div>
         </div>
@@ -53,7 +46,6 @@
                     >
                     <div class="user-component__text">
                         <h4 class="user-component__title">Gaetaegoo</h4>
-                        <!-- <h6 class="user-component__subtitle">Ubermensch</h6> -->
                     </div>
                 </div>
                 <div class="user-component__column">
@@ -93,8 +85,8 @@
             </ul>
         </nav>
 
-        <!-- 코톡 스플래쉬 효과 -->
-        <!-- 유일무이 한 것들은 id로 주자 -->
+        <!-- kokoa-talk splash 효과 -->
+        <!-- 유일무이 한 것들은 id로 주자(너무 클래스만 안 써도 됨) -->
         <div id="splash-screen">
             <i class="fa-solid fa-comment"></i>
         </div>
@@ -103,7 +95,6 @@
             <span>Your screen is too big 😂</span>
         </div>
 
-        <!-- script는 항상 마지막에 있어야 함, body태그를 닫기 직전 -->
         <script
             src="https://kit.fontawesome.com/389d342bca.js"
             crossorigin="anonymous"

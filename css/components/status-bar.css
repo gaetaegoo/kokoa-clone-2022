@@ -36,6 +36,7 @@
 .status-bar__column:last-child :nth-child(2) {
     margin-right: 2px;
 }
+
 /* 위와 같은 방법으로는 class를 따라 검색하는 방법이 있음*/
 /* .status-bar__column .fa-battery-full {
     margin-right: 2px;
