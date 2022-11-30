@@ -2,4 +2,4 @@
 
 HTML & CSS Clone coding!
 
-[🌈 kokoa webpage :) (mobile size)](https://gaetaegoo.github.io/kokoa-clone-2022)
+[🌈 kokoa webpage(mobile size)](https://gaetaegoo.github.io/kokoa-clone-2022)
