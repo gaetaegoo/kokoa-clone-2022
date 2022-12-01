@@ -4,4 +4,4 @@ HTML & CSS Clone coding!
 
 [🌈 my kokoa webpage :)](https://gaetaegoo.github.io/kokoa-clone-2022)  
 
-(mobile size)
+(mobile size, min-width: 645px)
