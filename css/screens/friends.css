@@ -62,6 +62,6 @@
     font-size: 96px;
     /* forwards를 줘서 opacity 0의 값을 유지함(애니메이션 종료 효과 유지) */
     animation: hideSplashScreen 0.3s ease-in-out forwards;
-    /* 애니메이션 처음화면이 유지  되다가 넘어갈 수 있도록 */
+    /* 애니메이션 처음화면이 유지 되다가 넘어갈 수 있도록 */
     animation-delay: 0.5s;
 }
